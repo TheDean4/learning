@@ -26,6 +26,8 @@ def save_words_to_database(database_path: str, words_list: list):
                 else:
                     sql = "insert into words(word) values ('" + word + "')"
                 cur.execute(sql)
-                conn.close()
-                print("Database Operations (save) Complete!")
+                # conn.close() I had a repeating error here due to the print command being listed in the loop above.
+
+            print("Database Operations (save) Complete!")
+
 
